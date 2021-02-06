@@ -1,0 +1,352 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #555555;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+
+  font-weight: normal;
+
+  line-height: 1.6em;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #202b49;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+}
+
+.logo {
+    color: rgb(255, 253, 253);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(3, 0, 0);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+  .nav-links {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width:760px) {
+  body {
+      
+      overflow-x: hidden;
+      
+  }
+
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color:rgb(175,238,238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width : 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-links li {
+    opacity: 0;
+}
+
+.burger {
+    display: block;
+}
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);    
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* login.php */
+
+.hero{
+    min-height: calc(98vh - 60px);
+    background: rgb(169,169,169);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+  }
+  .banner-title {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    color: #202b49;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+  }
+  .banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    background-color: #202b49;
+    border: 1px solid rgb(175,238,238);
+    color: #fff;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+
+  .login h2{
+    margin-left: 20px;
+    color: #202b49;
+  }
+
+  .login_form {
+    Padding:5px 5px;
+    width:90%;
+    font-size:20px;
+    margin-left:20px; 
+  }
+
+  #login-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* end of login.php */
+
+/* index.php */
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#showcase {
+  background: url(../images/enrollment-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#showcase h1{
+  color: #fff;
+  font-size: 35px;
+  line-height: 1.6em;
+  padding-top: 20px;
+}
+
+.rows {
+  padding: 4rem 0;
+}
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.rows-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.school-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
+
+
+.row h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.row h4 {
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-align: center;
+
+  
+}
+
+#main-footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 3rem;
+}
+
+/* end of index.php */
+
+/* enroll_now.php */
+.enroll {
+  padding: 4rem 0 0 0;
+}
+.enroll-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.enroll-title h3, .enroll-title h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.enroll-title h5 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.enroll-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+
+.text-container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.enroll-text {
+  display: block;
+  width: 100%;
+  min-height: 2.5rem;
+  font-size: 18px;
+  padding: 5px;
+}
+
+
+.enroll-form h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.enroll-button {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* end of enroll_now.php */

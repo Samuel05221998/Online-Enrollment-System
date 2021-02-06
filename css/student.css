@@ -1,0 +1,415 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #202b49;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.l-navbar {
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    width: 92px;
+    height: 90vh;
+    background-color: #202b49;
+    color: #FFF;
+    padding: 1.5rem 1.5rem 1.5rem;
+    transition: .5s;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav_brand {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav_toggle {
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+.nav_logo {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .75rem;
+    padding: .75rem;
+    color: #FFF;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav_link:hover {
+    background-color: #0C5DF4;
+}
+
+.nav_icon {
+    font-size: 1.25rem;
+}
+
+.nav_name {
+    font-size: .875rems;
+}
+
+.expander {
+    width: calc(92px + 9.25rem);
+}
+
+.body-pd {
+    padding: 0 0 0 9rem;
+}
+
+.active {
+    background-color: #0C5DF4;
+}
+
+.collapse {
+    grid-template-columns: 20px max-content 1fr;
+}
+
+.collapse_link {
+    justify-self: flex-end;
+    transition: .5;
+}
+
+.collapse_menu {
+    display: none;
+    padding: .75rem 2.25rem;
+}
+
+.collapse_sublink {
+    color: #B6CEFC;
+    font-size: .875rem;
+}
+
+.collapse_sublink:hover {
+    color: #FFF;
+}
+
+.showCollapse {
+    display: block;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+div {
+    transition: .5s;
+}
+
+.right-side {
+    right: 20vw;
+    padding: 6rem 2rem 0 7rem;
+    width: 100%;
+    height: 100%;
+}
+
+.right-side {
+    right: 20vw;
+    padding: 6rem 2rem 0 7rem;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    column-gap: 30px;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    border: 1px solid #ddd;
+}
+
+.enroll-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    border: 1px solid #ddd;
+}
+
+.table-form {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    overflow-x: scroll;
+}
+
+.table td, .table th {
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.table th {
+    background-color: #202b49;
+    color: #ffffff;
+    
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+@media(max-width: 900px) {
+ 
+
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0%;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Modal */
+.modal-btn {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.modal-btn:hover {
+    background-color: green;
+}
+
+.modal-bg {
+position:fixed;
+width:100%;
+height:100vh;
+top:0;
+left:0;
+background-color:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+visibility:hidden;
+opacity:0;
+transition:visibility 0s, opacity 0.5s;
+}
+    
+.modal {
+    position:relative;
+    font-family:'Montserrat',sans-serif;
+    background-color:white;
+    width:30%;
+    height:40%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:column;
+    font-size: 1.2rem;
+}
+
+.modal input,
+.modal select {
+    font-size:20px;
+    width: 70%;
+}
+
+.modal button {
+    padding:10px 30px;
+    background-color:#2980b9;
+    color:white;
+    border:none;
+    font-family:'Montserrat',sans-serif;
+    cursor:pointer;
+}
+
+.modal-close{
+position:absolute;
+top:10px;
+right:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.bg-active{
+    visibility:visible;
+    opacity:1;
+}
+
+.fee-details {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+.type-details {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 50%;
+    padding: 15px;
+}
+
+.row-details {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0 5px 0;
+}
+
+.text-details {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.price-details {
+    width: 40%;
+    float: right;
+    text-align: right;
+}
+
+.print-btn-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.print-btn {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#percent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.status {
+    width: 70%;
+}
+
+.rows-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0 5px 0;
+    border: 1px solid #ddd;
+}
+
+.payment-details {
+    display:flex;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;   
+    margin-right: 1rem;
+}
+
+.select-payment { 
+    width: 100%;
+    display: flex;
+    float: left;
+    justify-content: center;
+    margin-bottom: 20px;
+}
